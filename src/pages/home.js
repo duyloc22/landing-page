@@ -1,3 +1,5 @@
+import { HeaderContainer } from "../containers/headerContainer";
+
 export default function Home() {
-    return <h1>I am home</h1>;
+    return <HeaderContainer />;
 }

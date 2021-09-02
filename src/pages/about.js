@@ -1,3 +1,9 @@
+import { HeaderContainer } from "../containers/headerContainer";
 export default function About() {
-    return <h1>I am about</h1>;
+    return (
+        <>
+            <HeaderContainer />
+            <p>about</p>
+        </>
+    );
 }
