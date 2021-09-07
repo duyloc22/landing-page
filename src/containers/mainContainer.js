@@ -5,7 +5,6 @@ import Github from "../assets/Github.svg";
 
 export function MainContainer() {
     const [publishedDeploy, setPublishedDeploy] = useState([]);
-    const [isHover, setIsHover] = useState(false);
 
     useEffect(() => {
         const fetchNetlify = async () => {
