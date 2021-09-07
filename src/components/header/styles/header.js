@@ -17,10 +17,11 @@ export const Inner = styled.div`
 export const Nav = styled.div`
     display: flex;
     align-items: center;
+    margin-right: 100px;
 `;
 export const StyledLink = styled(NavLink)`
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 5px 10px;
     border-radius: 20px;
     &.${(props) => props.activeClassName} {
