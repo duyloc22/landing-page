@@ -1,4 +1,4 @@
-import { Container, Inner, Wrapper, Img, Title, Link, Date } from "./styles/project";
+import { Container, Inner, Wrapper, Img, Title, Link, Date, Info, Icon, Div } from "./styles/project";
 
 export default function Project({ children, ...restProps }) {
     return <Wrapper {...restProps}>{children}</Wrapper>;
@@ -27,4 +27,15 @@ Project.Link = ({ href, children, ...restProps }) => {
 };
 Project.Date = ({ children, ...restProps }) => {
     return <Date {...restProps}>{children}</Date>;
+};
+
+Project.Info = ({ children, ...restProps }) => {
+    return <Info {...restProps}>{children}</Info>;
+};
+Project.Icon = ({ src, alt, ...restProps }) => {
+    return <Icon src={src} alt={alt} {...restProps} />;
+};
+
+Project.Div = ({ children, ...restProps }) => {
+    return <Div {...restProps}>{children}</Div>;
 };

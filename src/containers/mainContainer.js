@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Project } from "../components";
+import moment from "moment";
+import Github from "../assets/Github.svg";
 
 export function MainContainer() {
     const [publishedDeploy, setPublishedDeploy] = useState([]);
+    const [isHover, setIsHover] = useState(false);
 
     useEffect(() => {
         const fetchNetlify = async () => {
@@ -32,8 +35,15 @@ export function MainContainer() {
                         <Project.Link href={item.url} target="blank">
                             <Project.Img src={item.screenshot_url} alt={item.site_id} />
                         </Project.Link>
-                        <Project.Title>{item.url.replace("https://", "").replace(".duyloc.dev", "")}</Project.Title>
-                        <Project.Date>{item.created_at.substring(0, 10)}</Project.Date>
+                        <Project.Info>
+                            <Project.Div>
+                                <Project.Title>{item.url.replace("https://", "").replace(".duyloc.dev", "")}</Project.Title>
+                                <Project.Date>{moment(item.created_at).format("LL")}</Project.Date>
+                            </Project.Div>
+                            <Project.Link target="blank" href={item.commit_url.split("/").slice(0, -2).join("/")}>
+                                <Project.Icon src={Github} alt="Github" />
+                            </Project.Link>
+                        </Project.Info>
                     </Project>
                 );
             })}
