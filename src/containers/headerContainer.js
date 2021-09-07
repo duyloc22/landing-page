@@ -24,7 +24,7 @@ export function HeaderContainer() {
                 <Hero.Bg delay={4} direction={"alternate-reverse"} />
                 <Hero.Bg delay={5} />
                 <Hero.Wrapper>
-                    <Hero.Content>Hello</Hero.Content>
+                    <Hero.Content>duyloc.dev</Hero.Content>
                 </Hero.Wrapper>
             </Hero>
         </>

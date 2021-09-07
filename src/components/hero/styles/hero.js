@@ -11,7 +11,8 @@ const slide = keyframes`
 
 export const Container = styled.div``;
 export const Inner = styled.div`
-    height: 200px;
+    height: 250px;
+    overflow: hidden;
     position: relative;
 `;
 export const Bg = styled.div`
