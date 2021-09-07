@@ -9,7 +9,9 @@ const slide = keyframes`
     }
   `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    margin-top: 50px;
+`;
 export const Inner = styled.div`
     height: 250px;
     overflow: hidden;

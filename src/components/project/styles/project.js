@@ -7,7 +7,7 @@ export const Inner = styled.div`
     grid-auto-flow: row-dense;
     grid-gap: 25px 50px;
     padding: 15px 25px 50px;
-    margin: 0 auto 50px;
+    margin: 50px auto;
     max-width: 1500px;
 `;
 export const Wrapper = styled.div`

@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    background-color: white;
+`;
 export const Inner = styled.div`
     display: flex;
     justify-content: space-between;

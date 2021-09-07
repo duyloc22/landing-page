@@ -17,7 +17,6 @@ export function MainContainer() {
                 },
             });
             const data = await res.json();
-            console.log(data);
             data.forEach((element) => {
                 setPublishedDeploy((prevState) => {
                     return [...prevState, element.published_deploy];
@@ -26,7 +25,6 @@ export function MainContainer() {
         };
         fetchNetlify();
     }, []);
-    console.log(publishedDeploy);
     return (
         <Project.Container>
             {publishedDeploy.map((item, i) => {
