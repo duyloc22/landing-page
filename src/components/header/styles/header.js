@@ -27,6 +27,7 @@ export const Nav = styled.div`
         justify-content: center;
         right: 0.5em;
         font-size: 3rem;
+        display: none;
     }
     @media (max-width: 480px) {
         font-size: 2rem;
@@ -60,6 +61,29 @@ export const Wrapper = styled.div`
     }
 `;
 export const Hamburger = styled.div`
-    width: 5px;
-    height: 1px;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    right: 20px;
+    background: black;
+    top: 20px;
+    cursor: pointer;
+
+    &:after {
+        margin-top: 5px;
+    }
+    &:before {
+        margin-top: 10px;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+    }
+    @media (min-width: 770px) {
+        display: none;
+    }
 `;
