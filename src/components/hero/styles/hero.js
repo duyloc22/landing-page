@@ -10,7 +10,7 @@ const slide = keyframes`
   `;
 
 export const Container = styled.div`
-    margin-top: 50px;
+    margin-top: 60px;
 `;
 export const Inner = styled.div`
     height: 250px;

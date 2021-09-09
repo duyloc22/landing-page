@@ -27,7 +27,7 @@ export const Nav = styled.div`
         justify-content: center;
         right: 0.5em;
         font-size: 3rem;
-        display: none;
+        display: ${({ activeNav }) => (activeNav ? "flex" : "none")};
     }
     @media (max-width: 480px) {
         font-size: 2rem;
@@ -70,10 +70,10 @@ export const Hamburger = styled.div`
     cursor: pointer;
 
     &:after {
-        margin-top: 5px;
+        margin-top: 3px;
     }
     &:before {
-        margin-top: 10px;
+        margin-top: 8px;
     }
     &:before,
     &:after {
