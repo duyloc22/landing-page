@@ -1,4 +1,4 @@
-import { Container, Inner, Nav, StyledLink, Logo, Title, Button, Wrapper } from "./styles/header";
+import { Container, Inner, Nav, StyledLink, Logo, Title, Button, Wrapper, Hamburger } from "./styles/header";
 
 export default function Header({ children, ...restProps }) {
     return (
@@ -25,4 +25,7 @@ Header.Button = function HeaderButton({ children, ...restProps }) {
 };
 Header.Wrapper = function HeaderWrapper({ children, ...restProps }) {
     return <Wrapper {...restProps}>{children} </Wrapper>;
+};
+Header.Hamburger = function HeaderHamburger({ children, ...restProps }) {
+    return <Hamburger {...restProps}>{children} </Hamburger>;
 };

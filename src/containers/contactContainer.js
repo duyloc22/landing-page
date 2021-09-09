@@ -13,7 +13,7 @@ export default function ContactContainer() {
                     <Contact.Button>Submit</Contact.Button>
                 </Contact.Form>
             </Contact.Wrapper>
-            <Contact.Wrapper>
+            <Contact.Wrapper svg>
                 <Contact.Img src={contact} alt="contact" />
             </Contact.Wrapper>
         </Contact>
