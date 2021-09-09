@@ -11,6 +11,9 @@ const slide = keyframes`
 
 export const Container = styled.div`
     margin-top: 60px;
+    @media (max-width: 769px) {
+        margin: 0;
+    }
 `;
 export const Inner = styled.div`
     height: 250px;

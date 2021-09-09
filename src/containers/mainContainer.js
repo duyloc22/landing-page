@@ -37,7 +37,7 @@ export function MainContainer() {
                                 <Project.Title>{item.url.replace("https://", "").replace(".duyloc.dev", "")}</Project.Title>
                                 <Project.Date>{moment(item.created_at).format("LL")}</Project.Date>
                             </Project.Div>
-                            <Project.Link target="blank" href={item.commit_url.split("/").slice(0, -2).join("/")}>
+                            <Project.Link target="blank" href={item.commit_url && item.commit_url.split("/").slice(0, -2).join("/")}>
                                 <Project.Icon src={Github} alt="Github" />
                             </Project.Link>
                         </Project.Info>
