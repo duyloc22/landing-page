@@ -46,6 +46,8 @@ export const Icon = styled.img`
     margin-top: 15px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    display: none;
+
     &:hover {
         transform: scale(1.1);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);

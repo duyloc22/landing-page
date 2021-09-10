@@ -6,6 +6,7 @@ import defaultImg from "../assets/defaultImg.svg";
 
 export function MainContainer() {
     const [publishedDeploy, setPublishedDeploy] = useState([]);
+    const [hoverIndex, setHoverIndex] = useState(-1);
 
     useEffect(() => {
         const fetchNetlify = async () => {
@@ -25,14 +26,13 @@ export function MainContainer() {
         };
         fetchNetlify();
     }, []);
-
     return (
         <Project.Container>
             {publishedDeploy
                 .filter((p) => p.url !== "https://duyloc.dev")
                 .map((item, i) => {
                     return (
-                        <Project key={i}>
+                        <Project key={i} onMouseEnter={() => setHoverIndex(i)} onMouseLeave={() => setHoverIndex(-1)}>
                             <Project.Link href={item.url} target="blank">
                                 <Project.Img src={item.screenshot_url ? item.screenshot_url : defaultImg} alt={item.site_id} />
                             </Project.Link>
@@ -42,7 +42,7 @@ export function MainContainer() {
                                     <Project.Date>{moment(item.created_at).format("LL")}</Project.Date>
                                 </Project.Div>
                                 <Project.Link target="blank" href={item.commit_url && item.commit_url.split("/").slice(0, -2).join("/")}>
-                                    <Project.Icon src={Github} alt="Github" />
+                                    <Project.Icon style={i === hoverIndex ? { display: "block" } : null} src={Github} alt="Github" />
                                 </Project.Link>
                             </Project.Info>
                         </Project>
