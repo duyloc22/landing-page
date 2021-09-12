@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     margin: 200px 0 0;
+
+    @media (max-width: 768px) {
+        margin-top: 100px;
+    }
 `;
 export const Inner = styled.div`
     display: flex;
@@ -11,6 +15,7 @@ export const Wrapper = styled.div`
     max-width: 600px;
     width: 100%;
     text-align: center;
+    padding: 2em;
 
     @media (max-width: 1000px) {
         ${({ svg }) => svg && "display:none"}

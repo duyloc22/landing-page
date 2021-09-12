@@ -4,12 +4,12 @@ import about from "../assets/about.svg";
 export default function AboutContainer() {
     return (
         <About>
-            <About.Wrapper>
+            <About.Wrapper svg>
                 <About.Img src={about} alt="about" />
             </About.Wrapper>
             <About.Wrapper>
                 <About.Title>About me</About.Title>
-                <About.Text>Hi! My name is Duy Lộc, a Front end developer base on Dallas, Texas. ✋</About.Text>
+                <About.Text>Hi! My name is Duy Loc, a Front end developer base on Dallas, Texas. ✋</About.Text>
                 <About.Text>
                     I create this website to share, organize and show case my project. Most of project here is come from practice, web challenge or
                     bootcamp. You are free to clone it.
