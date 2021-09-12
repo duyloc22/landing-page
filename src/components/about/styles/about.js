@@ -24,35 +24,8 @@ export const Title = styled.h1`
         font-size: 1.5rem;
     }
 `;
+export const Text = styled.p``;
 export const Img = styled.img`
     width: 100%;
     height: 100%;
-`;
-export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-`;
-export const Input = styled.input`
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-    margin: 15px 0;
-    opacity: 0.6;
-    max-width: 300px;
-    width: 100%;
-
-    &:focus {
-        opacity: 1;
-    }
-`;
-export const Button = styled.button`
-    margin: 30px 0 0 0;
-    padding: 10px 20px;
-    background-color: #af9cda;
-    color: white;
-    border: none;
-    border-radius: 20px;
 `;
