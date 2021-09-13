@@ -38,6 +38,8 @@ export const StyledLink = styled(NavLink)`
     margin: 0 10px;
     padding: 5px 10px;
     border-radius: 20px;
+    color: inherit;
+
     &.${(props) => props.activeClassName} {
         background-color: #f1f1fd;
         font-weight: 600;
