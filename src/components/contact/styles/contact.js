@@ -29,7 +29,16 @@ export const Title = styled.h1`
         font-size: 1.5rem;
     }
 `;
-export const Text = styled.p``;
+export const Text = styled.p`
+    position: relative;
+    top: 150px;
+    width: 1000px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f66;
+`;
 export const Img = styled.img`
     width: 100%;
     height: 100%;
