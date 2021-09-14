@@ -24,6 +24,13 @@
         <title>Loc Pham</title>
     </head>
     <body>
+        <!-- A little help for the Netlify post-processing bots -->
+        <form name="contact" netlify netlify-honeypot="bot-field" action="/" hidden>
+            <input type="text" name="fname" />
+            <input type="email" name="email" />
+            <input name="message" />
+        </form>
+
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
         <!--
@@ -35,5 +42,6 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    --></body>
+-->
+    </body>
 </html>
