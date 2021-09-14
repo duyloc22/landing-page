@@ -1,18 +1,24 @@
 import { Contact } from "../components";
 import contact from "../assets/contact.svg";
+import { useEffect, useState } from "react";
 
 export default function ContactContainer() {
-    // function handleSubmit(e) {
-    //     e.preventDefault();
-    // }
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        if (window.location.search.includes("success=true")) {
+            setSuccess(true);
+        }
+    }, []);
 
     return (
         <Contact>
+            {success && <Contact.Text>Thanks for your message! </Contact.Text>}
             <Contact.Wrapper>
-                <Contact.Form name="contact" method="POST" data-netlify="true">
+                <Contact.Title>Contact me</Contact.Title>
+                <Contact.Form name="contact" method="POST" action="/contact/?success=true" data-netlify="true">
                     <Contact.Input type="hidden" name="contact-form" value="contact" />
 
-                    <Contact.Title>Contact me</Contact.Title>
                     <Contact.Input type="text" name="fname" placeholder="Full Name" />
                     <Contact.Input type="email" name="email" placeholder="Email" />
                     <Contact.Input name="message" placeholder="Message" />

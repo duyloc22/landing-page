@@ -1,4 +1,4 @@
-import { Container, Inner, Wrapper, Title, Img, Form, Input, Button } from "./styles/contact";
+import { Container, Inner, Wrapper, Title, Text, Img, Form, Input, Button } from "./styles/contact";
 
 export default function Contact({ children, ...restProps }) {
     return (
@@ -14,6 +14,9 @@ Contact.Wrapper = ({ children, ...restProps }) => {
 
 Contact.Title = ({ children, ...restProps }) => {
     return <Title {...restProps}>{children}</Title>;
+};
+Contact.Text = ({ children, ...restProps }) => {
+    return <Text {...restProps}>{children}</Text>;
 };
 
 Contact.Img = ({ src, ...restProps }) => {
