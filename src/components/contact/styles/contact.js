@@ -60,4 +60,10 @@ export const Button = styled.button`
     color: white;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: #886ad0;
+    }
 `;

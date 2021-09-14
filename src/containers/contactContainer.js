@@ -2,11 +2,15 @@ import { Contact } from "../components";
 import contact from "../assets/contact.svg";
 
 export default function ContactContainer() {
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
+
     return (
         <Contact>
             <Contact.Wrapper>
-                <Contact.Form name="contact" method="POST" data-netlify="true">
-                    {/* <Contact.Input type="hidden" name="form-name" value="contact" /> */}
+                <Contact.Form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
+                    <Contact.Input type="hidden" name="contact" value="contact" />
 
                     <Contact.Title>Contact me</Contact.Title>
                     <Contact.Input type="text" name="fname" placeholder="Full Name" />
