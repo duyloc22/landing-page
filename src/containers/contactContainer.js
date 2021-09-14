@@ -5,7 +5,7 @@ export default function ContactContainer() {
     return (
         <Contact>
             <Contact.Wrapper>
-                <Contact.Form name="contact" method="POST" netlify>
+                <Contact.Form name="contact" method="POST" data-netlify="true">
                     {/* <Contact.Input type="hidden" name="form-name" value="contact" /> */}
 
                     <Contact.Title>Contact me</Contact.Title>
