@@ -9,10 +9,10 @@ export default function ContactContainer() {
                     {/* <Contact.Input type="hidden" name="form-name" value="contact" /> */}
 
                     <Contact.Title>Contact me</Contact.Title>
-                    <Contact.Input placeholder="Full Name" />
-                    <Contact.Input placeholder="Email" />
-                    <Contact.Input placeholder="Message" />
-                    <Contact.Button>Submit</Contact.Button>
+                    <Contact.Input type="text" name="fname" placeholder="Full Name" />
+                    <Contact.Input type="email" name="email" placeholder="Email" />
+                    <Contact.Input name="message" placeholder="Message" />
+                    <Contact.Button type="submit">Submit</Contact.Button>
                 </Contact.Form>
             </Contact.Wrapper>
             <Contact.Wrapper svg>
