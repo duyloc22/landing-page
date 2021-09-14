@@ -9,7 +9,7 @@ export default function ContactContainer() {
     return (
         <Contact>
             <Contact.Wrapper>
-                <Contact.Form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
+                <Contact.Form onSubmit={handleSubmit} name="contact" method="POST" netlify>
                     <Contact.Input type="hidden" name="contact" value="contact" />
 
                     <Contact.Title>Contact me</Contact.Title>
