@@ -13,7 +13,7 @@ export default function ContactContainer() {
             .join("&");
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = () => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -21,8 +21,6 @@ export default function ContactContainer() {
         })
             .then(() => alert("Success!"))
             .catch((error) => alert(error));
-
-        e.preventDefault();
     };
 
     return (
@@ -31,7 +29,7 @@ export default function ContactContainer() {
             <Contact>
                 <Contact.Wrapper>
                     <Contact.Title>Contact me</Contact.Title>
-                    <Contact.Form name="contact" onSubmit={handleSubmit} data-netlify="true">
+                    <Contact.Form name="contact" action="/contact?success=true  " onSubmit={handleSubmit} data-netlify="true">
                         <Contact.Input type="hidden" name="contact-form" value="contact" />
 
                         <Contact.Input
