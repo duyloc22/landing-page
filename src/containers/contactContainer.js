@@ -1,18 +1,12 @@
 import { Contact } from "../components";
 import contact from "../assets/contact.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ContactContainer() {
-    const [success, setSuccess] = useState(false);
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    // useEffect(() => {
-    //     if (window.location.search.includes("success=true")) {
-    //         setSuccess(true);
-    //     }
-    // }, []);
     const encode = (data) => {
         return Object.keys(data)
             .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -23,7 +17,7 @@ export default function ContactContainer() {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state }),
+            body: encode({ "form-name": "contact", fullName, email, message }),
         })
             .then(() => alert("Success!"))
             .catch((error) => alert(error));
@@ -35,7 +29,6 @@ export default function ContactContainer() {
         <>
             <Contact.Text>This page is under construction!!! </Contact.Text>
             <Contact>
-                {/* {success && <Contact.Text>Thanks for your message! </Contact.Text>} */}
                 <Contact.Wrapper>
                     <Contact.Title>Contact me</Contact.Title>
                     <Contact.Form name="contact" onSubmit={handleSubmit} data-netlify="true">
