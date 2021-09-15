@@ -27,7 +27,6 @@ export default function ContactContainer() {
 
     return (
         <>
-            <Contact.Text>This page is under construction!!! </Contact.Text>
             <Contact>
                 <Contact.Wrapper>
                     <Contact.Title>Contact me</Contact.Title>
