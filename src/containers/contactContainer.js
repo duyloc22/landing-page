@@ -31,12 +31,12 @@ export default function ContactContainer() {
             <Contact>
                 <Contact.Wrapper>
                     <Contact.Title>Contact me</Contact.Title>
-                    <Contact.Form name="contact" action="/contact?success=true  " onSubmit={handleSubmit} data-netlify="true">
+                    <Contact.Form name="contact" onSubmit={handleSubmit} data-netlify="true">
                         <Contact.Input type="hidden" name="contact-form" value="contact" />
 
                         <Contact.Input
                             type="text"
-                            name="fname"
+                            name="fullName"
                             placeholder="Full Name"
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
