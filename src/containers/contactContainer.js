@@ -13,7 +13,7 @@ export default function ContactContainer() {
             .join("&");
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -21,6 +21,8 @@ export default function ContactContainer() {
         })
             .then(() => alert("Success!"))
             .catch((error) => alert(error));
+
+        e.preventDefault();
     };
 
     return (
