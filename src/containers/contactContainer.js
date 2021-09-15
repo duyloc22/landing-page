@@ -38,7 +38,7 @@ export default function ContactContainer() {
                 {/* {success && <Contact.Text>Thanks for your message! </Contact.Text>} */}
                 <Contact.Wrapper>
                     <Contact.Title>Contact me</Contact.Title>
-                    <Contact.Form name="contact" onSummit={handleSubmit} data-netlify="true">
+                    <Contact.Form name="contact" onSubmit={handleSubmit} data-netlify="true">
                         <Contact.Input type="hidden" name="contact-form" value="contact" />
 
                         <Contact.Input
