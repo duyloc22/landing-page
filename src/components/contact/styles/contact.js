@@ -58,6 +58,8 @@ export const Input = styled.input`
     opacity: 0.6;
     max-width: 300px;
     width: 100%;
+    background-color: inherit;
+    font-size: 1.2rem;
 
     &:focus {
         opacity: 1;
